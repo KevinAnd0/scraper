@@ -45,12 +45,10 @@ try:
             driver.switch_to.window(parent_win)
             
         button = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'lankNasta1')))
-        time.sleep(1)
         next_button = button
         button.click()
-        time.sleep(1)
 
 except:
     pass
-# finally:
-    # driver.quit()
+finally:
+    driver.quit()
